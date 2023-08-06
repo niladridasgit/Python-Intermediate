@@ -20,10 +20,6 @@ def arrange_files_as_per_extension_name(location):
     if flag==0:
         print('No files here ['+location+']')
 
-location=r'C:\Users\ASUS\Desktop\New folder'
-
-arrange_files_as_per_extension_name(location)
-
 def arrange_files_as_per_common_text_in_each_file_name(location):
     uniqueness_list=set()
     choice=int(input("""MENU
@@ -67,6 +63,26 @@ ENTER - """))
     if flag==0:
         print('No files here ['+location+']')
 
-location=r'C:\Users\ASUS\Desktop\New folder\mp4'
+def rename_file_names_to_numbers(location):
+    files_list=os.listdir(location)
+    flag=0
+    count=int(input('Enter starting number - '))
+    for i in files_list:
+        if os.path.isfile(location+'\\'+i):
+            os.rename(location+'\\'+i, location+'\\'+str(count)+'.'+i.split('.')[1])
+            count+=1
+            flag=1
+    if flag==0:
+        print('No files here ['+location+']')
 
-arrange_files_as_per_common_text_in_each_file_name(location)
+# location1=r'C:\Users\ASUS\Desktop\ANU'
+
+# arrange_files_as_per_extension_name(location1)
+
+# location2=r'C:\Users\ASUS\Desktop\PURI\mp4'
+
+# arrange_files_as_per_common_text_in_each_file_name(location2)
+
+location3=r'C:\Users\ASUS\Desktop\ANU\PHOTOS'
+
+rename_file_names_to_numbers(location3)
