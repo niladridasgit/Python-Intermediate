@@ -23,7 +23,7 @@ def arrange_files_as_per_extension_name(location):
 def arrange_files_as_per_common_text_in_each_file_name(location):
     uniqueness_list=set()
     choice=int(input("""MENU
-          PRESS [1] - IF YOU WANT TO GIVE THE COMMON TEXTS MANUALLY ONEBY ONE
+          PRESS [1] - IF YOU WANT TO GIVE THE COMMON TEXTS MANUALLY ONE BY ONE
           PRESS [2] - IF YOU WANT TO GIVE A STARTING AND ENDING INDEX TO FETCH THE COMMON TEXTS FROM THE FILE NAMES AUTOMATICALLY
 ENTER - """))
     match choice:
@@ -83,6 +83,6 @@ def rename_file_names_to_numbers(location):
 
 # arrange_files_as_per_common_text_in_each_file_name(location2)
 
-location3=r'C:\Users\ASUS\Desktop\ANU\PHOTOS'
+location3=r'C:\Users\ASUS\Pictures\A\Arranged Final\Travelling Videos\SIKKIM\VIDEOS\EDITED\TIMELAPSES'
 
 rename_file_names_to_numbers(location3)
